@@ -75,6 +75,34 @@ while True :
         θ = None
         unknowns = 0
         continue
+    if V == None :
+        V = input("Enter V: ")
+        if V != "" :
+            try :
+                V = float(V)
+                if V <= 0 :
+                    V = None
+            except :
+                V = None
+        else :
+            unknowns += 1
+        continue
+    elif V != "" :
+        print("V = " + str(V) + " m/s")
+    if θ == None :
+        θ = input("Enter θ: ")
+        if θ != "" :
+            try :
+                θ = float(θ)
+                if θ <= 0 :
+                    θ = None
+            except :
+                θ = None
+        else :
+            unknowns += 1
+        continue
+    elif θ != "" :
+        print("θ = " + str(θ) + "°")
     if t == None :
         t = input("Enter t: ")
         if t != "" :
@@ -117,34 +145,6 @@ while True :
         continue
     elif h != "" :
         print("h = " + str(h) + " m")
-    if V == None :
-        V = input("Enter V: ")
-        if V != "" :
-            try :
-                V = float(V)
-                if V <= 0 :
-                    V = None
-            except :
-                V = None
-        else :
-            unknowns += 1
-        continue
-    elif V != "" :
-        print("V = " + str(V) + " m/s")
-    if θ == None :
-        θ = input("Enter θ: ")
-        if θ != "" :
-            try :
-                θ = float(θ)
-                if θ <= 0 :
-                    θ = None
-            except :
-                θ = None
-        else :
-            unknowns += 1
-        continue
-    elif θ != "" :
-        print("θ = " + str(θ) + "°")
     if not isinstance(h, float) and not isinstance(V, float) and not isinstance(θ, float) :
         t = None
         x = None
